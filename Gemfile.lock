@@ -40,6 +40,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     nifty-generators (0.4.6)
+    pg (0.14.1)
     polyglot (0.3.1)
     pygmentize (0.0.3)
     rack (1.2.3)
@@ -75,6 +76,7 @@ PLATFORMS
 
 DEPENDENCIES
   nifty-generators
+  pg
   pygmentize
   rails (= 3.0.9)
   redcarpet
