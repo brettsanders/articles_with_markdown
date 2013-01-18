@@ -74,6 +74,21 @@ a {
   margin: 0;
 }
 
+.isResizable {
+            background: rgba(255, 0, 0, 0.2);
+            font-size: .7em;
+            padding: 10px;
+            border: 1px solid black;
+            overflow: hidden;
+            overflow-y: scroll ;
+            resize: vertical;
+            /*width: 160px;*/
+            width: 100%;
+            height: 150px;
+            min-height: 5px;
+            max-height: 400px;
+        }
+
 .highlight { background-color: #002B36 }
 .hll { background-color: #002B36 }
 .c { color: #586E75 } /* Comment */

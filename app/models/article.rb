@@ -2,6 +2,18 @@ class Article < ActiveRecord::Base
   attr_accessible :name, :content, :rendered_content
 
   before_save :render_body
+
+  # need searchable block for solr
+  searchable do
+    text :name, :boost => 5 
+    text :content, :rendered_content, :publish_month
+    string :publish_month
+  end
+
+  def publish_month
+    created_at.strftime("%B %Y")
+  end
+
   private
   def render_body
     require 'redcarpet'

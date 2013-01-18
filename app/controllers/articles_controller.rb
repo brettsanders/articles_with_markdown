@@ -1,7 +1,28 @@
 class ArticlesController < ApplicationController
+
   def index
+    if params[:search].blank?
+      @search_results = []
+    else
+      @search = Article.search do
+        fulltext params[:search]
+      end
+      @search_results = @search.results
+
+    end
     @articles = Article.all
   end
+
+  # def index
+  #   @search = Article.search do
+  #     fulltext params[:search]
+  #   end
+  #   @articles = Article.all
+  #   @search_results = @search.results
+
+  #   @user = Cameraplus::API::User.find("brettrsanders")
+
+  # end
 
   def show
     @article = Article.find(params[:id])

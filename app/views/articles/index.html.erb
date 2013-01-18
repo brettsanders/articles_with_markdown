@@ -1,8 +1,35 @@
 <% title "Articles" %>
+<p><%= link_to "Add New Article", new_article_path %></p>
+<h2>Search Results</h2>
+
+<%= form_tag articles_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<div style="background-color:yellow">
+  <% for search_result in @search_results %>
+    <h2><%= link_to search_result.name, search_result %></h2>
+    <p><%= search_result.content %></p>
+  <% end %>
+</div>
+
 
 <% for article in @articles %>
   <h2><%= link_to article.name, article %></h2>
   <p><%= article.content %></p>
 <% end %>
 
-<p><%= link_to "New Article", new_article_path %></p>
+<!-- 
+  @user below
+  Returns a hash from Photo+Api
+  But, none of the dot methods are working?
+  Maybe the Gem is outdated?
+  https://github.com/kevintuhumury/cameraplus#readme
+-->
+<%= @user %>
+
+
+<br />
+
