@@ -38,5 +38,9 @@ module Blog
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # To deploy with Devise on Heroku using Rails 3.1
+    # I'm using Rails 3.0.9
+    # config.assets.initialize_on_precompile = false
   end
 end

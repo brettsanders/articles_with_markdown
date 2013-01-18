@@ -13,6 +13,8 @@ gem 'progress_bar'
 
 gem 'cameraplus'
 
+gem 'devise'
+
 group :development do
   gem 'sqlite3'
 end

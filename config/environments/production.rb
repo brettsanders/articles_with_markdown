@@ -46,4 +46,7 @@ Blog::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  # Set to markdowner.com when deploy to production
+  # config.action_mailer.default_url_options = { :host => 'markdowner.com' }
 end
