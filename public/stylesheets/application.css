@@ -87,7 +87,11 @@ a {
             height: 150px;
             min-height: 5px;
             max-height: 400px;
-        }
+}
+
+#user_nav {
+  float: right;
+}
 
 .highlight { background-color: #002B36 }
 .hll { background-color: #002B36 }
